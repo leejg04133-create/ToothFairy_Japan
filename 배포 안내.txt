@@ -1,0 +1,40 @@
+배포 폴더: C:\Users\leejg\Documents\GitHub\ToothFairy_japan
+개발 원본: C:\Users\leejg\Documents\GitHub\새 폴더
+
+ToothFairy Japan 1.00 배포 안내
+
+배포 저장소: leejg04133-create/ToothFairy_Japan
+앱에 내장된 주소: https://raw.githubusercontent.com/leejg04133-create/ToothFairy_Japan/main/latest.json
+이 폴더에는 배포 파일만 있습니다. 개발 소스, API 키, 대화 기록은 포함하지 않았습니다.
+
+처음 게시하기 (GitHub Desktop)
+1. File > Add Local Repository에서 이 ToothFairy_japan 폴더를 선택합니다.
+2. Changes에서 1.00 폴더와 latest.json 등을 확인하고 Summary에 Release 1.00을 쓴 뒤 Commit to main을 누릅니다.
+3. Publish repository를 누릅니다. 이름은 ToothFairy_Japan, 계정은 leejg04133-create입니다.
+4. Keep this code private 체크를 해제하고 Publish repository를 누릅니다.
+   공개 배포 EXE를 누구나 받을 수 있게 됩니다. 비공개 저장소는 현재 무로그인 업데이트 방식과 호환되지 않습니다.
+5. 게시 후 위 latest.json 주소를 브라우저로 열어 version 1.00과 file 1.00/ToothFairyJapan.exe가 나오는지 확인합니다.
+
+처음 설치할 사용자
+1.00/ToothFairyJapan.exe를 내려받아 쓰면 됩니다. exe.config도 같은 폴더에 둘 수 있습니다.
+AI 모델과 음성은 앱 안의 설치 동의 과정을 통해 별도로 받습니다.
+
+다음 업데이트 (예: 1.01)
+개발 앱의 표시 버전과 내부 EXE 버전을 함께 1.01 / 1.1.0.0으로 올리고 빌드합니다.
+Prepare-Release.ps1에 새 EXE와 버전, 변경 내용을 전달하면 1.01 폴더와 latest.json이 생성됩니다.
+예: powershell -NoProfile -ExecutionPolicy Bypass -File .\Prepare-Release.ps1 -SourceExe 'C:\새빌드\ToothFairyJapan.exe' -Version '1.01' -Notes '변경 내용'
+GitHub Desktop에서 새 버전 폴더와 latest.json을 함께 Commit하고 Push origin합니다.
+이미 게시한 1.00 파일을 같은 버전으로 덮어쓰지 마세요. 최신 버전 번호가 높아야 알림이 켜집니다.
+
+사용자 업데이트 동작
+설정을 열면 온라인 버전을 확인하며, 열어 둔 동안에는 5분마다 다시 확인합니다.
+새 버전일 때만 로그아웃 위 업데이트 버튼이 흔들립니다.
+업데이트 > 다운로드 > 크기/SHA-256/내부 버전 검사 > 다시 시작하여 적용.
+새 EXE 전체를 받고 이전 앱이 종료된 뒤 기존 EXE를 교체합니다.
+설정과 대화 기록, 내려받은 모델은 AppData 등에 별도로 있어 유지됩니다.
+인터넷 오류 또는 파일 검증 실패 시 기존 실행 파일은 교체하지 않습니다.
+게시되지 않은 상태에서는 업데이트 확인 오류가 날 수 있습니다. 일반 채팅 기능에는 영향을 주지 않습니다.
+
+업데이트 테스트는 개발 폴더 design/builds의 '업데이트 알림 체험.lnk' 또는 '업데이트 HUD 체험.lnk'를 사용합니다.
+체험판은 실제 EXE를 교체하지 않습니다. 게시 후 실제 인터넷 다운로드와 재시작은 별도 최종 확인이 필요합니다.
+
