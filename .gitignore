@@ -8,3 +8,8 @@
 !/[0-9]*/ToothFairyJapan.exe
 !/[0-9]*/ToothFairyJapan.exe.config
 !/[0-9]*/notes.txt
+!/.github/
+!/.github/workflows/
+!/.github/workflows/update-manifest.yml
+!/.github/scripts/
+!/.github/scripts/Update-Manifest.ps1
