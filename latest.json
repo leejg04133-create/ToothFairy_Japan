@@ -1,9 +1,9 @@
 {
   "product": "ToothFairyJapan",
-  "version": "1.1.1",
-  "file": "1.1.1/ToothFairyJapan.exe",
-  "url": "https://github.com/leejg04133-create/ToothFairy_Japan/releases/download/1.1.1/ToothFairyJapan.exe",
-  "sha256": "f582eb882f31554adbcf4dc7f76a74d7c3494be7b70e86d2d9ca1c2b2cc331ff",
-  "size": 617019392,
-  "notes": "음성 엔진이 없는 PC에서 AI 다시 설치를 열면 Ollama·Gemma·AivisSpeech 세 항목을 함께 표시합니다. 취소 후 다시 설치를 열 수 있도록 안내 상태를 수정했습니다.\n\nToothFairyJapan.exe 하나만 다운로드하여 실행하세요. 기존 1.1 사용자는 앱 업데이트에서 1.1.1로 올릴 수 있습니다. 대화·학습 기록은 유지됩니다.\n\n검증: 격리된 설치창 표시·취소·재진입·약관·기존 기능 및 EXE 단독 실행. 실제 엔진 다운로드와 친구 PC 직접 검사는 수행하지 않았습니다."
+  "version": "1.1.2",
+  "file": "1.1.2/ToothFairyJapan.exe",
+  "url": "https://github.com/leejg04133-create/ToothFairy_Japan/releases/download/1.1.2/ToothFairyJapan.exe",
+  "sha256": "c14dad964a2509e76e64fc415df82b15d75b304e5e2a03b0d87595cff1b490cb",
+  "size": 617019904,
+  "notes": "원문 약관의 스크롤 끝 읽음 판정 수정. 새 사용자의 기본 채팅 글자 크기를 아주 작게로 변경. 한글 발음 보완을 AivisSpeech로 연결하고 단어 구분 응답 처리를 수정했습니다."
 }
