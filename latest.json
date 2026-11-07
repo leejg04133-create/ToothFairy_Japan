@@ -1,9 +1,9 @@
 {
   "product": "ToothFairyJapan",
-  "version": "1.1",
-  "file": "1.1/ToothFairyJapan.exe",
-  "url": "https://github.com/leejg04133-create/ToothFairy_Japan/releases/download/1.1/ToothFairyJapan.exe",
-  "sha256": "215dd3f557cc9fece135b0bd33fe0b11de0c95f82eab1356f71411594451c32d",
+  "version": "1.1.1",
+  "file": "1.1.1/ToothFairyJapan.exe",
+  "url": "https://github.com/leejg04133-create/ToothFairy_Japan/releases/download/1.1.1/ToothFairyJapan.exe",
+  "sha256": "f582eb882f31554adbcf4dc7f76a74d7c3494be7b70e86d2d9ca1c2b2cc331ff",
   "size": 617019392,
-  "notes": "PC별 기본 글꼴 차이 수정: Pretendard 내장. Windows 배율 처리 및 작은 화면의 상단 탭·설치 진행·약관 배치 개선. 약관 최초 표시와 좁은 창 읽음·동의 확인. 단일 EXE 배포 유지.\n\nToothFairyJapan.exe 하나만 다운로드하여 실행하세요. 기존 1.0 사용자는 앱 업데이트에서 1.1로 올릴 수 있습니다. 대화·학습 기록은 유지됩니다. AI와 음성 엔진은 앱에서 별도로 설치합니다.\n\n검증: 글꼴 설치 유무를 가정한 동일 글자 폭, 100/125/150/200% 배율 배치와 여러 작업 영역, EXE 단독 실행 및 격리 업데이트 재시작. 친구 PC 직접 검사와 실제 모니터 간 이동 검사는 포함하지 않습니다.\n\n글꼴: [Pretendard / SIL OFL 1.1](https://github.com/orioncactus/pretendard/blob/main/LICENSE)."
+  "notes": "음성 엔진이 없는 PC에서 AI 다시 설치를 열면 Ollama·Gemma·AivisSpeech 세 항목을 함께 표시합니다. 취소 후 다시 설치를 열 수 있도록 안내 상태를 수정했습니다."
 }
