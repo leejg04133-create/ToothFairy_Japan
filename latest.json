@@ -1,9 +1,9 @@
 {
   "product": "ToothFairyJapan",
-  "version": "1.1.3",
-  "file": "1.1.3/ToothFairyJapan.exe",
-  "url": "https://github.com/leejg04133-create/ToothFairy_Japan/releases/download/1.1.3/ToothFairyJapan.exe",
-  "sha256": "1e5da5bbd97e28a96ccfb5284afe5717772faed9e0c17b26f51daa5356c4a279",
-  "size": 617019904,
-  "notes": "기존 설치 폴더의 DLL과 내장 DLL이 중복 로딩되어 AI 연결 확인에서 OpenTelemetry 오류가 발생하던 문제를 수정했습니다. EXE 하나로 실행하는 방식은 유지됩니다.\n\nToothFairyJapan.exe 하나만 다운로드하여 실행하세요. 기존 앱을 완전히 종료한 뒤 새 EXE로 실행하면 적용됩니다. 대화·학습 기록과 받은 모델은 유지됩니다.\n\n검증: DLL 없음·전체·일부 잔존 환경, 여러 로드 순서, 실제 Workflow 취소 후 재시도, 기존 기능 및 실제 EXE 시작. Workflow 응답은 통제된 콜백이며 실제 모델 설치 완료 검사는 수행하지 않았습니다."
+  "version": "1.1.4",
+  "file": "1.1.4/ToothFairyJapan.exe",
+  "url": "https://github.com/leejg04133-create/ToothFairy_Japan/releases/download/1.1.4/ToothFairyJapan.exe",
+  "sha256": "e468cb4729ac2863718e8297639c2927ec2a7c6376a4aa0242cd51dd33c0021f",
+  "size": 617020416,
+  "notes": "뜻도 함께 보기를 기본으로 켜고, 기본 채팅 글자 크기를 가장 작은 아주 작게로 적용합니다. 크기 설정이 없는 파일에서도 같은 기본값을 사용합니다."
 }
