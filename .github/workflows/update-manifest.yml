@@ -1,13 +1,13 @@
 name: Publish EXE update info
 on:
-  push:
-    branches: [main]
-    paths:
-      - '**/ToothFairyJapan.exe'
-      - '**/notes.txt'
-      - '.github/workflows/update-manifest.yml'
-      - '.github/scripts/Update-Manifest.ps1'
+  release:
+    types: [published]
   workflow_dispatch:
+    inputs:
+      tag:
+        description: Published numeric release tag
+        required: true
+        type: string
 permissions:
   contents: write
 concurrency:
@@ -15,33 +15,37 @@ concurrency:
   cancel-in-progress: false
 jobs:
   manifest:
+    if: github.event_name == 'workflow_dispatch' || (!github.event.release.prerelease && !github.event.release.draft)
     runs-on: windows-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ github.event.release.tag_name || inputs.tag }}
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-      - name: Validate EXE and publish version info
+      - name: Validate release and publish manifest
         shell: pwsh
         run: |
-          $ErrorActionPreference = 'Stop'
+          $ErrorActionPreference='Stop'
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          for($attempt=1; $attempt -le 3; $attempt++) {
+          for($attempt=1;$attempt -le 3;$attempt++){
             git fetch origin main
-            if($LASTEXITCODE -ne 0){throw 'Could not fetch main'}
+            if($LASTEXITCODE){throw 'Fetch failed.'}
             git reset --hard origin/main
-            if($LASTEXITCODE -ne 0){throw 'Could not synchronize runner checkout'}
+            if($LASTEXITCODE){throw 'Runner checkout sync failed.'}
             & ./.github/scripts/Update-Manifest.ps1
             git add -- latest.json
-            if($LASTEXITCODE -ne 0){throw 'Could not stage manifest'}
+            if($LASTEXITCODE){throw 'Stage failed.'}
             git diff --cached --quiet
-            if($LASTEXITCODE -eq 0){Write-Output 'Version information is already current.'; exit 0}
+            if($LASTEXITCODE -eq 0){'Manifest already current.';exit 0}
             git commit -m 'Update download manifest [skip ci]'
-            if($LASTEXITCODE -ne 0){throw 'Could not commit manifest'}
+            if($LASTEXITCODE){throw 'Commit failed.'}
             git push origin HEAD:main
             if($LASTEXITCODE -eq 0){exit 0}
             Start-Sleep -Seconds 2
           }
-          throw 'Could not publish manifest. Check branch permissions and rerun this workflow.'
+          throw 'Manifest push failed.'
