@@ -3,7 +3,7 @@
   "version": "1.0",
   "file": "1.0/ToothFairyJapan.exe",
   "url": "https://github.com/leejg04133-create/ToothFairy_Japan/releases/download/1.0/ToothFairyJapan.exe",
-  "sha256": "1f070d474c24bcbcb22b1a6946cd808f7d8dcb72eae491f24c3c10680914faca",
+  "sha256": "4cd0803330ff21753b207d20203d7b7e9d8ee92ba6ff1e44d30df8e301f80c51",
   "size": 599671808,
-  "notes": "자동 설치 버튼으로 설치 통합, 중단 후 다시 진행 가능. Ollama만 AI 선택에 표시. 약관 제목 잘림 수정 및 5종 한국어 참고 번역 제공. 기존 한글 발음 대화·전경 채팅 음성·F12 운영자 진입 유지.\n\n처음 설치: ZIP을 다운로드하고 압축을 모두 풀어 실행하세요. 로컬 AI와 음성은 앱에서 설치합니다. 기존 1.0의 교체판이므로 같은 번호에서는 수동 교체하며, 이후 높은 번호는 앱 업데이트로 연결됩니다."
+  "notes": "설치·약관 팝업을 닫을 때 배경 전환 개선. 자동 설치 버튼으로 설치 통합, 중단 후 다시 진행 가능. Ollama만 AI 선택에 표시. 약관 제목 잘림 수정 및 5종 한국어 참고 번역 제공. 기존 한글 발음 대화·전경 채팅 음성·F12 운영자 진입 유지."
 }
